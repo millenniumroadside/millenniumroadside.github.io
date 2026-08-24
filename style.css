@@ -1,217 +1,516 @@
 * {
-box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 body {
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#0b0b0b;
-color:white;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: white;
 }
 
 
+/* =========================
+   NAVIGATION
+========================= */
+
 .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 5%;
-background:#050505;
-position:absolute;
-width:100%;
-z-index:10;
+    padding: 15px 5%;
 
+    background: #050505;
+
+    position: absolute;
+
+    width: 100%;
+
+    z-index: 10;
 }
 
 
 .logo {
-
-width:120px;
-
+    width: 120px;
+    height: auto;
 }
 
 
-.call-btn,
-.main-call {
-
-background:#d40000;
-color:white;
-padding:15px 25px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
+
+/* CALL BUTTON */
+
+.call-btn {
+    background: #d40000;
+
+    color: white;
+
+    padding: 15px 25px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.call-btn:hover {
+    background: #ff0000;
+
+    transform: translateY(-2px);
+}
+
+
+/* WHATSAPP BUTTON */
+
+.whatsapp-btn {
+    background: #25D366;
+
+    color: white;
+
+    padding: 15px 25px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.whatsapp-btn:hover {
+    background: #1ebe5d;
+
+    transform: translateY(-2px);
+}
+
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
+    height: 90vh;
 
-height:90vh;
-background-image:url("truck.jpg");
-background-size:cover;
-background-position:center;
-position:relative;
+    background-image: url("truck.jpg");
 
+    background-size: cover;
+
+    background-position: center;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
 }
 
 
 .overlay {
+    position: absolute;
 
-position:absolute;
-inset:0;
-background:
-linear-gradient(
-90deg,
-rgba(0,0,0,.85),
-rgba(0,0,0,.45)
-);
+    inset: 0;
 
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.88),
+            rgba(0,0,0,.45)
+        );
 }
 
 
 .hero-content {
+    position: relative;
 
-position:relative;
-z-index:2;
-padding-top:170px;
-padding-left:8%;
-max-width:700px;
+    z-index: 2;
 
+    padding-left: 8%;
+
+    max-width: 750px;
 }
 
 
-.hero-logo {
+.hero-content h1 {
+    font-size: 55px;
 
-width:260px;
-margin-bottom:25px;
+    line-height: 1.05;
 
+    margin: 10px 0;
 }
 
 
-h1 {
+.hero-content p {
+    font-size: 22px;
 
-font-size:55px;
-line-height:1.05;
-margin:10px 0;
+    color: #ddd;
 
+    margin-bottom: 30px;
 }
 
 
-.hero p {
+/* MAIN CALL BUTTON */
 
-font-size:22px;
-color:#ddd;
+.main-call {
+    display: inline-block;
 
+    background: #d40000;
+
+    color: white;
+
+    padding: 17px 30px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 20px;
+
+    transition: 0.3s;
 }
 
+
+.main-call:hover {
+    background: #ff0000;
+
+    transform: translateY(-3px);
+}
+
+
+
+/* =========================
+   SERVICES
+========================= */
 
 .services {
+    padding: 75px 6%;
 
-padding:70px 6%;
-text-align:center;
+    text-align: center;
 
+    background: #0b0b0b;
 }
 
 
-h2 {
+.services h2,
+.about h2,
+.contact h2 {
+    font-size: 38px;
 
-font-size:38px;
-color:#e00000;
+    color: #e00000;
 
+    margin-bottom: 40px;
 }
 
 
 .service-grid {
+    display: grid;
 
-display:grid;
-grid-template-columns:
-repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
 
+    gap: 25px;
+
+    max-width: 1100px;
+
+    margin: auto;
 }
 
 
 .card {
+    background: #181818;
 
-background:#181818;
-padding:30px;
-border-radius:12px;
-border:1px solid #333;
-font-size:18px;
-transition:.3s;
+    padding: 30px 25px;
 
+    border-radius: 12px;
+
+    border: 1px solid #333;
+
+    font-size: 18px;
+
+    transition: 0.3s;
 }
 
 
 .card:hover {
+    transform: translateY(-8px);
 
-transform:translateY(-8px);
-border-color:#e00000;
+    border-color: #e00000;
 
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.5);
 }
 
 
-.card:first-letter {
+.service-icon {
+    font-size: 42px;
 
-font-size:35px;
-
+    margin-bottom: 10px;
 }
 
+
+.card h3 {
+    font-size: 22px;
+
+    margin: 10px 0;
+}
+
+
+.card p {
+    color: #bbb;
+
+    line-height: 1.5;
+}
+
+
+
+/* =========================
+   WHY CHOOSE US
+========================= */
 
 .about {
+    background: #151515;
 
-background:#151515;
-padding:60px;
-text-align:center;
+    padding: 70px 30px;
 
+    text-align: center;
 }
 
 
 .features {
+    display: flex;
 
-display:flex;
-justify-content:center;
-gap:25px;
-flex-wrap:wrap;
-font-size:20px;
+    justify-content: center;
 
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+    font-size: 20px;
 }
 
+
+.features div {
+    background: #202020;
+
+    padding: 15px 25px;
+
+    border-radius: 8px;
+
+    border: 1px solid #333;
+}
+
+
+
+/* =========================
+   CONTACT
+========================= */
 
 .contact {
+    padding: 75px 20px;
 
-padding:70px 20px;
-text-align:center;
+    text-align: center;
 
+    background: #0b0b0b;
 }
 
+
+.contact p {
+    font-size: 20px;
+
+    color: #ccc;
+
+    margin-bottom: 30px;
+}
+
+
+.contact-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.main-whatsapp {
+    display: inline-block;
+
+    background: #25D366;
+
+    color: white;
+
+    padding: 17px 30px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 20px;
+
+    transition: 0.3s;
+}
+
+
+.main-whatsapp:hover {
+    background: #1ebe5d;
+
+    transform: translateY(-3px);
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
+    background: #000;
 
-background:#000;
-padding:20px;
-text-align:center;
-color:#999;
+    padding: 20px;
 
+    text-align: center;
+
+    color: #999;
 }
 
 
-@media(max-width:700px){
 
-h1 {
-font-size:38px;
-}
+/* =========================
+   MOBILE
+========================= */
 
-.navbar {
+@media (max-width: 700px) {
 
-padding:15px;
+    .navbar {
+        padding: 12px 15px;
 
-}
+        flex-wrap: wrap;
 
-.logo {
+        gap: 10px;
+    }
 
-width:90px;
 
-}
+    .logo {
+        width: 90px;
+    }
+
+
+    .header-buttons {
+        gap: 6px;
+    }
+
+
+    .call-btn,
+    .whatsapp-btn {
+
+        padding: 10px 12px;
+
+        font-size: 13px;
+    }
+
+
+    .hero {
+        height: 85vh;
+
+        background-position: center;
+    }
+
+
+    .hero-content {
+
+        padding-left: 25px;
+
+        padding-right: 25px;
+
+        padding-top: 100px;
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 38px;
+    }
+
+
+    .hero-content p {
+
+        font-size: 18px;
+    }
+
+
+    .main-call {
+
+        font-size: 17px;
+
+        padding: 15px 22px;
+    }
+
+
+    .services {
+
+        padding: 55px 20px;
+    }
+
+
+    .services h2,
+    .about h2,
+    .contact h2 {
+
+        font-size: 32px;
+    }
+
+
+    .service-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .features {
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+
+    .features div {
+
+        width: 100%;
+    }
+
+
+    .contact-buttons {
+
+        flex-direction: column;
+    }
+
+
+    .main-whatsapp {
+
+        width: 100%;
+
+        max-width: 300px;
+    }
 
 }
