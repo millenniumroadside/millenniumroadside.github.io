@@ -44,7 +44,9 @@ body {
 }
 
 
-/* CALL BUTTON */
+/* =========================
+   CALL BUTTON
+========================= */
 
 .call-btn {
     background: #d40000;
@@ -70,7 +72,9 @@ body {
 }
 
 
-/* WHATSAPP BUTTON */
+/* =========================
+   WHATSAPP BUTTON
+========================= */
 
 .whatsapp-btn {
     background: #25D366;
@@ -93,6 +97,42 @@ body {
     background: #1ebe5d;
 
     transform: translateY(-2px);
+}
+
+
+/* =========================
+   INSTAGRAM BUTTON
+========================= */
+
+.instagram-btn {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 48px;
+
+    height: 48px;
+
+    background: #E1306C;
+
+    color: white;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 24px;
+
+    transition: 0.3s;
+}
+
+
+.instagram-btn:hover {
+    transform: translateY(-2px);
+
+    opacity: 0.9;
 }
 
 
@@ -161,7 +201,10 @@ body {
 }
 
 
-/* MAIN CALL BUTTON */
+
+/* =========================
+   MAIN CALL BUTTON
+========================= */
 
 .main-call {
     display: inline-block;
@@ -422,10 +465,18 @@ footer {
 
     .call-btn,
     .whatsapp-btn {
-
         padding: 10px 12px;
 
         font-size: 13px;
+    }
+
+
+    .instagram-btn {
+        width: 38px;
+
+        height: 38px;
+
+        font-size: 20px;
     }
 
 
@@ -437,7 +488,6 @@ footer {
 
 
     .hero-content {
-
         padding-left: 25px;
 
         padding-right: 25px;
@@ -447,19 +497,16 @@ footer {
 
 
     .hero-content h1 {
-
         font-size: 38px;
     }
 
 
     .hero-content p {
-
         font-size: 18px;
     }
 
 
     .main-call {
-
         font-size: 17px;
 
         padding: 15px 22px;
@@ -467,7 +514,6 @@ footer {
 
 
     .services {
-
         padding: 55px 20px;
     }
 
@@ -475,19 +521,16 @@ footer {
     .services h2,
     .about h2,
     .contact h2 {
-
         font-size: 32px;
     }
 
 
     .service-grid {
-
         grid-template-columns: 1fr;
     }
 
 
     .features {
-
         flex-direction: column;
 
         gap: 12px;
@@ -495,19 +538,16 @@ footer {
 
 
     .features div {
-
         width: 100%;
     }
 
 
     .contact-buttons {
-
         flex-direction: column;
     }
 
 
     .main-whatsapp {
-
         width: 100%;
 
         max-width: 300px;
