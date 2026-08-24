@@ -123,9 +123,24 @@ body {
 
     text-decoration: none;
 
-    font-size: 24px;
-
     transition: 0.3s;
+}
+
+
+.instagram-btn svg {
+    width: 25px;
+
+    height: 25px;
+
+    fill: none;
+
+    stroke: white;
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
 }
 
 
@@ -475,8 +490,13 @@ footer {
         width: 38px;
 
         height: 38px;
+    }
 
-        font-size: 20px;
+
+    .instagram-btn svg {
+        width: 21px;
+
+        height: 21px;
     }
 
 
