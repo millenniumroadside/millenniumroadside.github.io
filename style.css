@@ -377,7 +377,7 @@ body {
 
 .certifications {
     background: #151515;
-    padding: 65px 20px;
+    padding: 55px 20px;
     text-align: center;
     border-top: 1px solid #292929;
 }
@@ -391,22 +391,22 @@ body {
 .certification-description {
     color: #ccc;
     font-size: 18px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .certification-logos {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 55px;
+    gap: 35px;
     flex-wrap: wrap;
 }
 
 .certification-card {
-    background: white;
-    width: 190px;
-    height: 190px;
-    border-radius: 12px;
+    background: #fff;
+    width: 165px;
+    height: 165px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -415,13 +415,28 @@ body {
 }
 
 .certification-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 }
 
 .certification-card img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
     object-fit: contain;
+}
+
+
+/* FIRST LOGO */
+.certification-card:first-child img {
+    max-width: 125px;
+    max-height: 125px;
+}
+
+/* SECOND LOGO */
+.certification-card:last-child img {
+    max-width: 140px;
+    max-height: 140px;
 }
 
 
@@ -430,7 +445,7 @@ body {
 @media (max-width: 700px) {
 
     .certifications {
-        padding: 50px 20px;
+        padding: 45px 15px;
     }
 
     .certifications h2 {
@@ -438,12 +453,22 @@ body {
     }
 
     .certification-logos {
-        gap: 25px;
+        gap: 18px;
     }
 
     .certification-card {
-        width: 155px;
-        height: 155px;
+        width: 145px;
+        height: 145px;
+    }
+
+    .certification-card:first-child img {
+        max-width: 110px;
+        max-height: 110px;
+    }
+
+    .certification-card:last-child img {
+        max-width: 125px;
+        max-height: 125px;
     }
 }
 
